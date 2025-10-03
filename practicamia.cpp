@@ -17,11 +17,16 @@ int main() {
     
     return 0;
 }
-//Permite crear un nuevo nodo del grafo
-NodoGrafo* grafo (int id){
-    NodoGrafo* nuevoNodo = new NodoGrafo;
+NodoGrafo * crearNuevoNodo(int id){
+    NodoGrafo * nuevoNodo = new NodoGrafo;
     nuevoNodo -> id = id;
-    nuevoNodo -> listaArcos = nullptr;
     nuevoNodo -> siguiente = nullptr;
+    nuevoNodo -> listaArcos = nullptr;
     return nuevoNodo;
+}
+
+void agregarNodo(NodoGrafo*grafo, int id){
+    NodoGrafo*nuevoNodo = crearNuevoNodo(id);
+    nuevoNodo -> siguiente = grafo;
+    grafo = nuevoNodo;
 }
