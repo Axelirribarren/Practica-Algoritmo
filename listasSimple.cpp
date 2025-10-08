@@ -7,13 +7,13 @@ struct Nodo{
     Nodo * link;
 };
 
-void agregar_Nodo(Nodo*&nodo, int valor){
+void agregarNodo(Nodo*nodo, int valor){
     Nodo*nuevo = new Nodo;
     nuevo -> dato = valor;
-    nuevo -> link = nuevo;
+    nuevo -> link = nodo;
     nodo = nuevo;
 }
-void agregar_Nodo_Final(Nodo*nodo , int valor){
+void agregarFinalNodo(Nodo*nodo, int valor){
     Nodo*nuevo = new Nodo;
     nuevo -> dato = valor;
     nuevo -> link = NULL;
@@ -21,7 +21,7 @@ void agregar_Nodo_Final(Nodo*nodo , int valor){
         nodo = nuevo;
         return;
     }
-    Nodo*aux = nodo;
+    Nodo * aux = nodo;
     while(aux -> link != NULL) aux = aux -> link;
     aux -> link = nuevo;
 }
