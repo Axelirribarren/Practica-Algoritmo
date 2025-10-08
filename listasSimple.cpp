@@ -22,12 +22,11 @@ void insertarNodoFinal(Nodo*&nodo, int valor){
         return;
     }
     Nodo*aux = nodo;
-    while(aux -> link != NULL) aux = aux -> link;
+    while(aux -> link != NULL) aux =aux -> link;
     aux -> link = nuevo;
 }
-
 void mostrar(Nodo*&nodo){
-    Nodo * aux = nodo;
+    Nodo*aux = nodo;
     cout << "LISTA: ";
     while(aux != NULL){
         cout << aux -> dato << " -> ";
@@ -35,7 +34,6 @@ void mostrar(Nodo*&nodo){
     }
     cout << "NULL" << endl;
 }
-
 void liberar(Nodo*&nodo){
     Nodo*aux;
     while(nodo != NULL){
