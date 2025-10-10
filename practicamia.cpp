@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+//FORMA SIMPLE DE CREAR UN GRAFO
 ///------ESTRUCTURA BASICA------///
 //PARA CREAR UNA LISTA DE NODOS Y QUE CADA NODO TENGA SU LISTA DE ARCOS.
 struct NodoGrafo{
